@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let grades = {
+            'list' : { 'aaa' : 10, 'bbb' : 6, 'ccc' : 80 },
+            'show' : function() {
+                document.write('Hello World');  // return 'Hello World';
+            }
+        };
+
+        
+
+        document.write(grades);
+        document.write("<br>");
+        document.write(grades['list']);
+        document.write("<br>");
+        document.write(grades['list']['aaa']);
+        document.write("<br><br>");
+
+        document.write(grades.list);
+        document.write("<br>");
+        document.write(grades.list.aaa);
+        document.write("<br><br>");
+
+        document.write(grades['show']);
+        document.write("<br>");
+        // document.write(grades['show']());
+        grades['show']();
+        document.write("<br>");
+        // document.write(grades.show());
+        grades.show();
+        document.write("<br><br>");
+
+        // 참고 
+        /*
+        document.write(grades['show']());
+        document.write(grades.show());
+        document.write( document.write('Hello World') );
+        */
+    </script>
+</body>
+</html>

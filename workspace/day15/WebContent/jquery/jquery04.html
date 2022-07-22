@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+<body>
+  <ul class="list">
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+  </ul>
+
+
+  <script>
+    $('.list li').each(function(index, item) {
+      // index  : 말그대로 index
+      // item   : 해당 선택자인 객체
+      // $(item).addClass('li_0' + index);
+      // item이 나자신을 의미하기도 하니깐 this로 대체가능
+      $(this).addClass('li_0' + index);
+    });
+  </script>
+</body>
+</html>

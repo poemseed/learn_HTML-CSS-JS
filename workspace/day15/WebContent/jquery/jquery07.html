@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+<body>
+  <!-- 
+    $.extend() 메소드
+    - 두 개 이상의 객체의 모든 속성을 하나의 객체로 병합한다.
+   -->
+
+   <script>
+     // 객체 생성
+     let obj1 = {
+       'name' : 'google'
+     };
+
+     let obj2 = {
+        url : 'www.google.com',
+        abc : 'def'
+     };
+
+     let obj3 = {
+       "name" : "ed",
+       "url"  : "www.ed.com",
+       "book" : "jQuery"
+     };
+
+     // 이 메소드는 인수로 전달받은 첫번째 객체에 두번째 이후 객체의 모든 속성값을 추가한다.
+     $.extend(obj1, obj2);
+
+     $.each(obj1, function(key, value) {
+       document.write('key = ' + key + ', value = ' + value + '<br>');
+     });
+
+     document.write('<br>---------------------------------------<br>');
+
+     $.each(obj2, function(key, value) {
+       document.write('key = ' + key + ', value = ' + value + '<br>');
+     });
+   </script>
+</body>
+</html>

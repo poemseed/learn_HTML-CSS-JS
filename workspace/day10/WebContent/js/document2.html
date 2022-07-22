@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+  </ul>
+
+  <ol>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+  </ol>
+
+  <script>
+    let ul = document.getElementsByTagName('ul')[0];
+    let lis = ul.getElementsByTagName("li");
+
+    for( let i = 0; i < lis.length; i++ ){
+      lis[i].style.color = 'tomato';
+    }
+
+    // 다른 방법 참고
+    // let list = document.getElementsByTagName("ul");
+
+    // for(let i = 0; i < list.length; i++) {
+    //   list[i].style.color = 'red';
+    // }
+     
+
+
+
+  </script>
+</body>
+</html>

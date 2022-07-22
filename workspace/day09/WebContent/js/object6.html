@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /*
+      this키워드를 사용해서 for문 사용해서, grades.show() 호출시
+      a: 10
+      b: 20
+      c: 30
+      을 출력하도록 하라
+    */
+
+    let grades = {
+      'list' : {'a' : 10, 'b' : 20, 'c' : 30 },
+      'show' : function(){
+        for( let name in this.list){
+          document.write(name + ' : ' + this.list[name] + '<br>');
+        }
+      }
+    };
+
+    grades.show();
+  </script>
+</body>
+</html>

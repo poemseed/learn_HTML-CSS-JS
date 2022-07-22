@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+<body>
+  <!-- 
+    focus(), blur(), change(), select()
+   -->
+
+   <p>
+     <input type="text">
+     <span></span>
+   </p>
+
+   <script>
+     $('input').focus(function(){ // 커서가 놓일때
+       $(this).next('span').html('focus');
+     }).blur(function(){          // 커서가 빠져나올때
+       $(this).next('span').html('blur');
+     }).change(function(event){   // input에 글씨를 쓰고 blur할때
+       alert('change! : ' + $(event.target).val() );
+     }).select(function(){        // input에 글씨를 드래그 할때
+       $(this).next('span').html('select');
+     });
+   </script>
+</body>
+</html>

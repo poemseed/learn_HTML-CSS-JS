@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!--
+    submit
+    - 폼 정보를 서보로 전송하는 명령어인 submit시에 일어나고 form태그에 적용
+  -->
+  <form action="result.html" id="target">
+    <label for="">
+      name : <input type="text" id="name">
+      <input type="submit">
+    </label>
+  </form>
+
+  <script>
+    let t = document.getElementById('target');
+    t.addEventListener('submit', function(event){
+      if( document.getElementById('name').value.length == 0 ){
+        alert('Name 필드의 값이 누락되었습니다.');
+        event.preventDefault();
+      }
+    });
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+<body>
+  <script>
+     let obj1 = {
+       'name' : 'google'
+     };
+
+     let obj2 = {
+        url : 'www.google.com',
+        abc : 'def'
+     };
+
+     let obj3 = {
+       "name" : "ed",
+       "url"  : "www.ed.com",
+       "book" : "jQuery"
+     };
+
+     // 중복되는 키값은 없어진다. 마지막에 extend 된 항목이 남아있음
+     $.extend(obj1, obj2, obj3);
+
+     $.each(obj1, function(key, value) {
+       document.write('key = ' + key + ', value = ' + value + '<br>');
+     })
+  </script>
+</body>
+</html>

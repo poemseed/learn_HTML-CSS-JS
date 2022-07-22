@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>
+    <!-- 
+      checked  : true   -> 체크가 되어 있는 상태 
+                 false  -> 체크가 되어 있지 않은 상태
+    -->
+    <label for="">prevent event on</label>
+    <input type="checkbox" id="prevent">
+  </p>
+  <p>
+    <a href="http://www.naver.com" id="sel1" >naver</a>
+  </p>
+  <form action="http://www.naver.com" id="sel2" >
+     <input type="submit">
+  </form>
+  
+
+  <script>
+    // property 방식
+    // onclick
+    document.getElementById('sel1').onclick = function(){
+      if( document.getElementById('prevent').checked ){
+        return false;
+      }
+    }
+
+    document.getElementById('sel2').onclick = function(){
+      if( document.getElementById('prevent').checked ){
+        return false;
+      }
+    }
+    
+    
+
+  </script>
+</body>
+</html>
